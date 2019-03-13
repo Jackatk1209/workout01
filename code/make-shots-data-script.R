@@ -15,32 +15,30 @@ durant <- read.csv("../data/kevin-durant.csv", stringsAsFactors = FALSE)
 thompson <- read.csv("../data/klay-thompson.csv", stringsAsFactors = FALSE)
 curry <- read.csv("../data/stephen-curry.csv", stringsAsFactors = FALSE)
 
-#add name column
-mutate(iguodala,name = "Andre Iguodala")
-mutate(green,name = "Draymond Green")
-mutate(durant,name = "Kevin Durant")
-mutate(thompson,name = "Klay Thompson")
-mutate(curry,name = "Stephen Curry")
+#name column
+curry$name <- rep("Stephen Curry", length(curry$team_name))
+iguodala$name <- rep("Andre Iguodala", length(iguodala$team_name))
+green$name <- rep("Draymond Green", length(green$team_name))
+durant$name <- rep("Kevin Durant", length(durant$team_name))
+thompson$name <- rep("Klay Thompson", length(thompson$team_name))
 
-#y/n to yes/no
+#replace y/n with shot_yes/ shot_no
+curry$shot_made_flag[curry$shot_made_flag == "y"] = "shot_yes"
+curry$shot_made_flag[curry$shot_made_flag == "n"] = "shot_no"
+iguodala$shot_made_flag[iguodala$shot_made_flag == "y"] = "shot_yes"
+iguodala$shot_made_flag[iguodala$shot_made_flag == "n"] = "shot_no"
+green$shot_made_flag[green$shot_made_flag == "y"] = "shot_yes"
+green$shot_made_flag[green$shot_made_flag == "n"] = "shot_no"
+durant$shot_made_flag[durant$shot_made_flag == "y"] = "shot_yes"
+durant$shot_made_flag[durant$shot_made_flag == "n"] = "shot_no"
+thompson$shot_made_flag[thompson$shot_made_flag == "y"] = "shot_yes"
+thompson$shot_made_flag[thompson$shot_made_flag == "n"] = "shot_no"
 
-iguodala[iguodala$shot_made_flag == "n"] <- "shot_no"
-iguodala[iguodala$shot_made_flag == "y"] <- "shot_yes"
-green[green$shot_made_flag == "n"] <- "shot_no"
-green[green$shot_made_flag == "y"] <- "shot_yes"
-durant[durant$shot_made_flag == "n"] <- "shot_no"
-durant[durant$shot_made_flag == "y"] <- "shot_yes"
-thompson[thompson$shot_made_flag == "n"] <- "shot_no"
-thompson[thompson$shot_made_flag == "y"] <- "shot_yes"
-curry[curry$shot_made_flag == "n"] <- "shot_no"
-curry[curry$shot_made_flag == "y"] <- "shot_yes"
-
-#minute adjustment with period
-iguodala$minute <- iguodala$period*12 - iguodala$minutes_remaining
-green$minute <- green$period*12 - green$minutes_remaining
-durant$minute <- durant$period*12 - durant$minutes_remaining
-thompson$minute <- thompson$period*12 - thompson$minutes_remaining
-curry$minute <- curry$period*12 - curry$minutes_remaining
+curry$minute = 12 * curry$period - curry$minutes_remaining
+iguodala$minute = 12*iguodala$period - iguodala$minutes_remaining
+green$minute = 12*green$period - green$minutes_remaining
+durant$minute = 12*durant$period - durant$minutes_remaining
+thompson$minute = 12*thompson$period - thompson$minutes_remaining
 
 ## Using sink for output
 sink(file = '../output/andre-iguodala-summary.txt')
@@ -64,9 +62,9 @@ summary(curry)
 sink()
 
 #row bind function to stack summaries for csv
-sink(file = '../data/shots-data.csv')
-rbind(summary(iguodala), summary(green), summary(durant), summary(thompson), summary(curry))
-sink()
+shots_data_og <- rbind(curry, iguodala, green, durant, thompson)
+shots_data <- as.data.frame(shots_data_og)
+write.csv(shots_data, "../data/shots-data.csv")
 
 #row bind function (txt version)
 sink(file = '../output/shots-data-summary.txt')
