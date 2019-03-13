@@ -12,17 +12,17 @@
  Mean   :28.02                                                             
  3rd Qu.:43.00                                                             
  Max.   :59.00                                                             
- shot_distance     opponent               x                 y              name          
- Min.   : 0.00   Length:915         Min.   :-246.00   Min.   :-39.00   Length:915        
- 1st Qu.: 2.00   Class :character   1st Qu.: -29.00   1st Qu.: 11.00   Class :character  
- Median :14.00   Mode  :character   Median :   0.00   Median : 80.00   Mode  :character  
- Mean   :13.12                      Mean   :  11.43   Mean   : 98.54                     
- 3rd Qu.:24.00                      3rd Qu.:  73.50   3rd Qu.:173.50                     
- Max.   :58.00                      Max.   : 240.00   Max.   :572.00                     
-     minute     
- Min.   : 1.00  
- 1st Qu.:11.00  
- Median :23.00  
- Mean   :22.25  
- 3rd Qu.:32.00  
- Max.   :48.00  
+ shot_distance     opponent               x                 y              minute     
+ Min.   : 0.00   Length:915         Min.   :-246.00   Min.   :-39.00   Min.   : 1.00  
+ 1st Qu.: 2.00   Class :character   1st Qu.: -29.00   1st Qu.: 11.00   1st Qu.:11.00  
+ Median :14.00   Mode  :character   Median :   0.00   Median : 80.00   Median :23.00  
+ Mean   :13.12                      Mean   :  11.43   Mean   : 98.54   Mean   :22.25  
+ 3rd Qu.:24.00                      3rd Qu.:  73.50   3rd Qu.:173.50   3rd Qu.:32.00  
+ Max.   :58.00                      Max.   : 240.00   Max.   :572.00   Max.   :48.00  
+     name          
+ Length:915        
+ Class :character  
+ Mode  :character  
+                   
+                   
+                   

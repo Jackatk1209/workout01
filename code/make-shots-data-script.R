@@ -6,39 +6,41 @@
 #set working directory
 getwd()
 setwd("~/Desktop/stats133/workout01/code")
+library(dplyr)
 
 #read in files
-iguodala<-read.csv("../data/andre-iguodala.csv",colClasses=c("character","character","integer","integer","integer","integer","character","character","character","integer","character","real","real"),stringsAsFactors = FALSE)
-green<-read.csv("../data/draymond-green.csv",colClasses=c("character","character","integer","integer","integer","integer","character","character","character","integer","character","real","real"),stringsAsFactors = FALSE)
-durant<-read.csv("../data/kevin-durant.csv",colClasses=c("character","character","integer","integer","integer","integer","character","character","character","integer","character","real","real"),stringsAsFactors = FALSE)
-thompson<-read.csv("../data/klay-thompson.csv",colClasses=c("character","character","integer","integer","integer","integer","character","character","character","integer","character","real","real"),stringsAsFactors = FALSE)
-curry<-read.csv("../data/stephen-curry.csv",colClasses=c("character","character","integer","integer","integer","integer","character","character","character","integer","character","real","real"),stringsAsFactors = FALSE)
+iguodala <- read.csv('../data/andre-iguodala.csv', stringsAsFactors = FALSE)
+green <- read.csv("../data/draymond-green.csv", stringsAsFactors = FALSE)
+durant <- read.csv("../data/kevin-durant.csv", stringsAsFactors = FALSE)
+thompson <- read.csv("../data/klay-thompson.csv", stringsAsFactors = FALSE)
+curry <- read.csv("../data/stephen-curry.csv", stringsAsFactors = FALSE)
 
 #add name column
-iguodala$name="Andre Iguodala"
-green$name="Draymond Green"
-durant$name="Kevin Durant"
-thompson$name="Klay Thompson"
-curry$name="Stephen Curry"
+mutate(iguodala,name = "Andre Iguodala")
+mutate(green,name = "Draymond Green")
+mutate(durant,name = "Kevin Durant")
+mutate(thompson,name = "Klay Thompson")
+mutate(curry,name = "Stephen Curry")
 
 #y/n to yes/no
-iguodala$shot_made_flag[iguodala$shot_made_flag=="n"] <- "shot_no"
-iguodala$shot_made_flag[iguodala$shot_made_flag=="y"] <- "shot_yes"
-green$shot_made_flag[green$shot_made_flag=="n"] <- "shot_no"
-green$shot_made_flag[green$shot_made_flag=="y"] <- "shot_yes"
-durant$shot_made_flag[durant$shot_made_flag=="n"] <- "shot_no"
-durant$shot_made_flag[durant$shot_made_flag=="y"] <- "shot_yes"
-thompson$shot_made_flag[thompson$shot_made_flag=="n"] <- "shot_no"
-thompson$shot_made_flag[thompson$shot_made_flag=="y"] <- "shot_yes"
-curry$shot_made_flag[curry$shot_made_flag=="n"] <- "shot_no"
-curry$shot_made_flag[curry$shot_made_flag=="y"] <- "shot_yes"
+
+iguodala[iguodala$shot_made_flag == "n"] <- "shot_no"
+iguodala[iguodala$shot_made_flag == "y"] <- "shot_yes"
+green[green$shot_made_flag == "n"] <- "shot_no"
+green[green$shot_made_flag == "y"] <- "shot_yes"
+durant[durant$shot_made_flag == "n"] <- "shot_no"
+durant[durant$shot_made_flag == "y"] <- "shot_yes"
+thompson[thompson$shot_made_flag == "n"] <- "shot_no"
+thompson[thompson$shot_made_flag == "y"] <- "shot_yes"
+curry[curry$shot_made_flag == "n"] <- "shot_no"
+curry[curry$shot_made_flag == "y"] <- "shot_yes"
 
 #minute adjustment with period
-iguodala$minute=iguodala$period*12-iguodala$minutes_remaining
-green$minute=green$period*12-green$minutes_remaining
-durant$minute=durant$period*12-durant$minutes_remaining
-thompson$minute=thompson$period*12-thompson$minutes_remaining
-curry$minute=curry$period*12-curry$minutes_remaining
+iguodala$minute <- iguodala$period*12 - iguodala$minutes_remaining
+green$minute <- green$period*12 - green$minutes_remaining
+durant$minute <- durant$period*12 - durant$minutes_remaining
+thompson$minute <- thompson$period*12 - thompson$minutes_remaining
+curry$minute <- curry$period*12 - curry$minutes_remaining
 
 ## Using sink for output
 sink(file = '../output/andre-iguodala-summary.txt')

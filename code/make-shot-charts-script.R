@@ -71,3 +71,4 @@ all_shots <- ggplot(data = all_data) +
   ggtitle("Shot Charts: GSW (2016 season)") +
   theme_minimal() + facet_wrap(~name)
 ggsave(filename = "../images/gsw-shot-charts.pdf", width = 8, height = 7)
+
