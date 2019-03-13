@@ -1,0 +1,40 @@
+               team_name               game_date              season               period
+ Class :character  : 5   Class :character  : 5   1st Qu.:2016  :5    Max.   :4.000  : 4  
+ Mode  :character  : 5   Mode  :character  : 5   3rd Qu.:2016  :5    Median :2.000  : 4  
+ Length:1220       : 1   Length:1220       : 1   Max.   :2016  :5    Min.   :1.000  : 4  
+ Length:1250       : 1   Length:1250       : 1   Mean   :2016  :5    1st Qu.:1.000  : 3  
+ Length:371        : 1   Length:371        : 1   Median :2016  :5    3rd Qu.:3.000  : 3  
+ (Other)           : 2   (Other)           : 2   Min.   :2016  :5    1st Qu.:1.00   : 1  
+ NA's              :15   NA's              :15                       (Other)        :11  
+        minutes_remaining       seconds_remaining            shot_made_flag
+ Max.   :11.000  : 5      Max.   :59.00  : 5      Class :character  : 5    
+ Min.   : 0.000  : 5      Min.   : 0.00  : 5      Mode  :character  : 5    
+ 3rd Qu.: 9.000  : 3      3rd Qu.:44.00  : 3      Length:1220       : 1    
+ 1st Qu.: 1.000  : 2      1st Qu.:13.00  : 2      Length:1250       : 1    
+ 1st Qu.: 2.000  : 2      Median :27.00  : 2      Length:371        : 1    
+ Median : 4.000  : 2      1st Qu.:10.00  : 1      (Other)           : 2    
+ (Other)         :11      (Other)        :12      NA's              :15    
+             action_type               shot_type         shot_distance
+ Class :character  : 5   Class :character  : 5   Min.   : 0.00  : 5   
+ Mode  :character  : 5   Mode  :character  : 5   1st Qu.: 1.00  : 2   
+ Length:1220       : 1   Length:1220       : 1   3rd Qu.:24.00  : 2   
+ Length:1250       : 1   Length:1250       : 1   3rd Qu.:25.00  : 2   
+ Length:371        : 1   Length:371        : 1   1st Qu.: 2.00  : 1   
+ (Other)           : 2   (Other)           : 2   1st Qu.: 5.00  : 1   
+ NA's              :15   NA's              :15   (Other)        :17   
+                opponent                    x                     y  
+ Class :character  : 5   Max.   : 240.00  : 2   1st Qu.:  2.00  : 1  
+ Mode  :character  : 5   Median :   0.00  : 2   1st Qu.:  8.0   : 1  
+ Length:1220       : 1   Min.   :-248.00  : 2   1st Qu.: 11.00  : 1  
+ Length:1250       : 1   1st Qu.: -27.00  : 1   1st Qu.: 16.0   : 1  
+ Length:371        : 1   1st Qu.: -29.00  : 1   1st Qu.: 18.0   : 1  
+ (Other)           : 2   1st Qu.: -65.5   : 1   3rd Qu.:150.00  : 1  
+ NA's              :15   (Other)          :21   (Other)         :24  
+                   name                minute
+ Class :character  : 5   Max.   :48.00  : 5  
+ Mode  :character  : 5   Min.   : 1.00  : 4  
+ Length:1220       : 1   Median :23.00  : 3  
+ Length:1250       : 1   3rd Qu.:32.00  : 2  
+ Length:371        : 1   Median :24.00  : 2  
+ (Other)           : 2   1st Qu.: 9.00  : 1  
+ NA's              :15   (Other)        :13  

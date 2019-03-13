@@ -3,8 +3,9 @@
 #Inputs: five CSV files, one for each starter (Curry, Durant, Iguodala, Green, Thompson)
 #Outputs: ########do this#########
 
-#imports
-library(dplyr)
+#set working directory
+getwd()
+setwd("~/Desktop/stats133/workout01/code")
 
 #read in files
 iguodala<-read.csv("../data/andre-iguodala.csv",colClasses=c("character","character","integer","integer","integer","integer","character","character","character","integer","character","real","real"),stringsAsFactors = FALSE)
@@ -14,11 +15,11 @@ thompson<-read.csv("../data/klay-thompson.csv",colClasses=c("character","charact
 curry<-read.csv("../data/stephen-curry.csv",colClasses=c("character","character","integer","integer","integer","integer","character","character","character","integer","character","real","real"),stringsAsFactors = FALSE)
 
 #add name column
-mutate(iguodala, name = "Andre Iguodala")
-mutate(green, name = "Draymond Green")
-mutate(durant, name = "Kevin Durant")
-mutate(thompson, name = "Klay Thompson")
-mutate(curry, name = "Stephen Curry")
+iguodala$name="Andre Iguodala"
+green$name="Draymond Green"
+durant$name="Kevin Durant"
+thompson$name="Klay Thompson"
+curry$name="Stephen Curry"
 
 #y/n to yes/no
 iguodala$shot_made_flag[iguodala$shot_made_flag=="n"] <- "shot_no"
