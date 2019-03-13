@@ -10,7 +10,15 @@ Considered the best superteam in the NBA in recent years, the Golden State Warri
 Breaking Down Each Player's Performance
 =======================================
 
-The point guard of this team, Stephen Curry, is considered one of, if not the, best shooter in NBA history.
+The point guard of this team, Stephen Curry, is considered one of, if not the, best shooter in NBA history. His ability to score from everywhere on the floor (his scoring from inside the restricted area, to midrange, to 3 point territory are all similar), not to mention his affinity for shots way behind the three point line. His high volume of scoring is one aspect that helps Golden State retain such a high offensive efficiency.
+
+Shooting Guard Klay Thompson is no slouch either. The other half of the Splash Brothers duo (the other being Stephen Curry), Thompson also displays extreme skill in knocking down three pointers. Thompson is more of a specialist shooter compared to Curry, a designated sharpshooter whose 3 point percentage is even higher than Curry's (at over 42 percent), as we see in the visualized data below. Thompson is also an elite defender that helps Golden State on the defensive end.
+
+Forward Kevin Durant is an absolute scoring machine. His ability to knock down shots from everywhere on the court mirrors Curry's, and with a shooting percentage of over 54 percent, Durant boasts the highest shooting percentage on this team. Another two way player in addition to Thompson, Durant helps this team in many ways, namely defense and playmaking, in addition to scoring as we see in the charts below.
+
+Forward Andre Iguodala has the highest two pointer shooting percentage, but given that he mainly operates close to the rim for easy lay-ups and dunks (with the occasional midrange shot, which he is quite good at), his offensive stats aren't quite as good as the Durant, Curry, and Thompson. However, Iguodala is a great defender that can switch onto many positions, offering defensive utility and flexibility.
+
+Center/ Forward Draymond Green is another player whose efforts aren't reflected in just scoring numbers. His playmaking, rebounding, and defense make him critical to Golden State's style of play, and without Green the style would be very different. Green is also no slouch offensively, but his jack of all trades style certainly benefits Golden State in ways other than scoring which may not be seen in the graphs below.
 
 ``` r
 #libraries
@@ -77,3 +85,5 @@ all_points
     ## 5 Draymond Green   578   245     0.424
 
 <img src="../images/gsw-shot-charts.png" width="80%" style="display: block; margin: auto;" />
+
+Overall, the Golden State Warriors are definitely a great team to support, and given they win so much they certainly won't be a bore to watch. With world class talent on both ends of the floor, the Warriors will certainly be fun and interesting to follow!
